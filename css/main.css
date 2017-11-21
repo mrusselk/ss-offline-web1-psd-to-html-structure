@@ -141,7 +141,7 @@ textarea {
     transform: rotate(360deg) scale(1);
   }
 }
-*/
+
 
 .loader {
   width: 26px;
@@ -153,6 +153,17 @@ textarea {
   margin-left: -13px;
   -webkit-transform: translateY(-25px);
   transform: translateY(-25px);
+}
+*/
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:#fff;
+    transform: translate(-50%, -50%);
+    -webkit-animation:loading 1s linear infinite;
+    animation:loading 1s linear infinite;
+    font-weight: 300;
 }
 
 /*
@@ -201,11 +212,17 @@ textarea {
     height: 120px;
     -webkit-animation:spin 2s linear infinite;
     animation:spin 2s linear infinite;
+   box-sizing:border-box;
 }
 
 @keyframes spin{
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+@keyframes loading{
+    0%{opacity:1;}
+    50%{opacity: 0.1;}
+    100%{opacity: 0.9;}
 }
 
 .social i {
